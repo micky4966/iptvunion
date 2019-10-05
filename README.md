@@ -3,7 +3,7 @@ iptvunion beta panel
 
 www.iptvunion.tv
 
-<img src="https://github.com/IPTVUNION/iptvunion/raw/master/panel.jpg">
+<img src="https://github.com/micky4966/iptvunion/raw/master/panel.jpg">
 
 IPTV Panel: Ubuntu (64bit)
 
@@ -13,19 +13,8 @@ Installation options:
 
     sudo apt install mysql-server
 
-    wget https://raw.githubusercontent.com/IPTVUNION/iptvunion/master/iptvunion.sh && chmod a+x iptvunion.sh && ./iptvunion.sh
+    wget https://raw.githubusercontent.com/micky4966/iptvunion/master/iptvunion.sh && chmod a+x iptvunion.sh && ./iptvunion.sh
 
-
-Update: 
-
-    wget https://raw.githubusercontent.com/IPTVUNION/iptvunion/master/iptvunionWeb.sh && chmod a+x iptvunionWeb.sh && ./iptvunionWeb.sh
-
-
-###########################################################################################
-
-Bitcoin: 1EKwTkQnZvEKGVvR1J9tHzwUMZ2vXi9wJm
-
-Email: admin@iptvunion.tv
 
 ###########################################################################################
 
