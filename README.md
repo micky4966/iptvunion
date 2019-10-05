@@ -1,7 +1,5 @@
 # iptvunion
-iptvunion beta panel
-
-www.iptvunion.tv
+iptvunion panel
 
 <img src="https://github.com/micky4966/iptvunion/raw/master/panel.jpg">
 
