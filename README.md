@@ -1,4 +1,4 @@
-# iptvunion
+# iptvunion Full Decoded
 iptvunion panel Full Decoded
 
 <img src="https://github.com/micky4966/iptvunion/raw/master/panel.jpg">
