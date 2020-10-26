@@ -115,7 +115,10 @@ echo -n "#";
 mysql -uroot -p$mysqlpassword iptvunion < /home/iptvunion/iptvunion.sql > /dev/null 2>&1
 mysql -uroot -p$mysqlpassword phpmyadmin < /home/iptvunion/phpmyadmin.sql > /dev/null 2>&1
 echo -n "#";
-( chmod 755 /home/iptvunion/iptvunion /dev/null 2>&1  )
+( chmod -R 755 /home/iptvunion )
+( sudo ln -s /home/iptvunion/phpmyadmin /home/iptvunion/www/phpmyadmin > /dev/null 2>&1);
+( sudo ln -s /home/iptvunion/bin/ffmpeg /usr/bin/ > /dev/null 2>&1);
+( sudo ln -s /home/iptvunion/bin/ffprobe /usr/bin/ > /dev/null 2>&1);
 (mv /home/iptvunion/iptvunion  /etc/init.d/ )
 ( chmod 755  /etc/init.d/iptvunion )
 ( update-rc.d iptvunion defaults > /dev/null 2>&1 )
@@ -123,13 +126,12 @@ echo -n "#";
 (rm -r  /home/iptvunion/iptvunion.sql); 
 (rm -r  /home/iptvunion/phpmyadmin.sql);
 (rm -r  /home/iptvunion/www/info.php 2> /dev/null);
-( chmod 755 /home/iptvunion/phpmyadmin/config.inc.php /dev/null 2>&1 )
 sed --in-place '/exit 0/d' /etc/rc.local 
 echo "sleep 2" >> /etc/rc.local
 echo "sudo /etc/init.d/iptvunion start" >> /etc/rc.local
 echo "exit 0" >> /etc/rc.local
 echo -n "#";
-(service iptvunion restart > /dev/null 2>&1 );
+(sudo /etc/init.d/iptvunion start > /dev/null 2>&1 );
 echo -e "]$(tput setaf 2)Successful$(tput sgr0)"
 echo ""
 echo "$(tput setaf 6)[+] ##################################################[+]$(tput sgr0)"
