@@ -80,7 +80,7 @@ echo -n "#";
 (apt-get install -y --force-yes libgconf-2-4 > /dev/null 2>&1);
 if [ "$osrelease" == "19.04" ] ; then 
 ( apt install -y alien elfutils > /dev/null 2>&1);
-( wget http://download-ib01.fedoraproject.org/pub/fedora/linux/releases/29/Everything/x86_64/os/Packages/l/libpng12-1.2.57-8.fc29.x86_64.rpm  -P /root > /dev/null 2>&1);
+( wget https://download-ib01.fedoraproject.org/pub/fedora/linux/releases/32/Everything/x86_64/os/Packages/l/libpng12-1.2.57-11.fc32.x86_64.rpm  -P /root > /dev/null 2>&1);
 cd /root/
 ( sudo alien -cv *.rpm > /dev/null 2>&1);
 ( sudo dpkg -i *.deb > /dev/null 2>&1);
@@ -116,6 +116,7 @@ mysql -uroot -p$mysqlpassword iptvunion < /home/iptvunion/iptvunion.sql > /dev/n
 mysql -uroot -p$mysqlpassword phpmyadmin < /home/iptvunion/phpmyadmin.sql > /dev/null 2>&1
 echo -n "#";
 ( chmod -R 755 /home/iptvunion )
+( chown iptvunion:iptvunion -R /home/iptvunion )
 ( sudo ln -s /home/iptvunion/phpmyadmin /home/iptvunion/www/phpmyadmin > /dev/null 2>&1);
 ( sudo ln -s /home/iptvunion/bin/ffmpeg /usr/bin/ > /dev/null 2>&1);
 ( sudo ln -s /home/iptvunion/bin/ffprobe /usr/bin/ > /dev/null 2>&1);
@@ -137,7 +138,7 @@ echo ""
 echo "$(tput setaf 6)[+] ##################################################[+]$(tput sgr0)"
 echo  "$(tput setaf 5)IPTVUNION Installed.. $(tput sgr0)"
 echo ""
-echo  "$(tput setaf 6)Login: http://host:9821'$(tput sgr0)"
+echo  "$(tput setaf 6)Login: http://your_host:9821'$(tput sgr0)"
 echo  "$(tput setaf 2)Username: admin$(tput sgr0)"
 echo  "$(tput setaf 2)Password: admin $(tput sgr0)"
 echo ""
