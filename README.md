@@ -3,7 +3,7 @@ iptvunion panel Full Decoded
 
 <img src="https://github.com/micky4966/iptvunion/raw/master/panel.jpg">
 
-IPTV Panel: Ubuntu 16.04 (64bit)
+IPTV Panel: Ubuntu 16.04 and 18.04 (64bit)
 
 
 Installation options:
