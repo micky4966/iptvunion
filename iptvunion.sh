@@ -109,8 +109,8 @@ echo -n "#";
 echo -n "#";
 sed -i 's/xxx/'$mysqlpassword'/g' /home/iptvunion/www/controllers/config.php 
 echo -n "#";
-#mysql -u uroot -p -D iptvunion -e "DROP DATABASE iptvunion"
-#mysql -uroot -p$mysqlpassword -e "CREATE DATABASE iptvunion"
+mysql -u uroot -p -D iptvunion -e "DROP DATABASE iptvunion"
+mysql -uroot -p$mysqlpassword -e "CREATE DATABASE iptvunion"
 echo -n "#";
 mysql -uroot -p$mysqlpassword iptvunion < /home/iptvunion/iptvunion.sql > /dev/null 2>&1
 mysql -uroot -p$mysqlpassword phpmyadmin < /home/iptvunion/phpmyadmin.sql > /dev/null 2>&1
